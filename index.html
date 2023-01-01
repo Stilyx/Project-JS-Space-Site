@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Space</title>
+  </head>
+  <body>
+    <header class="header-content">
+      <img src="Images/logo.svg" alt="logo" />
+      <div class="menu">
+        <span class="hamburguer-bar"></span>
+        <span class="hamburguer-bar"></span>
+        <span class="hamburguer-bar"></span>
+      </div>
+      <span class="bar"></span>
+      <nav class="nav-content">
+        <form action="/">
+          <input type="radio" name="nav-options" id="home" class="nav-item" checked />
+          <label for="home"><span>00</span> Home</label>
+          <input type="radio" name="nav-options" id="destination" class="nav-item" />
+          <label for="destination"><span>01</span> Destination</label>
+          <input type="radio" name="nav-options" id="crew" class="nav-item" />
+          <label for="crew"><span>02</span> Crew</label>
+          <input type="radio" name="nav-options" id="technology" class="nav-item" />
+          <label for="technology"><span>03</span> Technology</label>
+        </form>
+      </nav>
+    </header>
+    <div class="section-description">
+      <p class="section-number">01</p>
+      <p class="section-title">PICK YOUR DESTINATION</p>
+    </div>
+    <main class="container">
+      <section class="home00">
+        <div class="space-description">
+          <p class="space-paragraph">SO, YOU WANT TO TRAVEL TO</p>
+          <h1 class="title">SPACE</h1>
+          <p class="space-description-paragraph baffle">
+            Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll
+            give you a truly out of this world experience!
+          </p>
+        </div>
+        <button class="explore">EXPLORE</button>
+      </section>
+      <section class="destination01">
+        <div class="planet-image">
+          <img src="Images/destination-images/moon.png" alt="Planet" class="planetChange" />
+        </div>
+        <div class="planets-description">
+          <form action="/">
+            <input type="radio" name="planets" id="moon" class="planets-radio" checked />
+            <label for="moon">MOON</label>
+            <input type="radio" name="planets" id="mars" class="planets-radio" />
+            <label for="mars">MARS</label>
+            <input type="radio" name="planets" id="europa" class="planets-radio" />
+            <label for="europa">EUROPA</label>
+            <input type="radio" name="planets" id="titan" class="planets-radio" />
+            <label for="titan">TITAN</label>
+          </form>
+          <h1 class="planet-name">MOON</h1>
+          <p class="planet-description baffle">
+            See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history
+            by visiting the Luna 2 and Apollo 11 landing sites.
+          </p>
+          <section class="planet-nerd-description">
+            <div class="planet-info">
+              <p class="info-title">AVG. DISTANCE</p>
+              <p class="info-number km-number">384,400 KM</p>
+            </div>
+            <div class="planet-info">
+              <p class="info-title">EST. TRAVEL TIME</p>
+              <p class="info-number days-number">3 DAYS</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="crew02">
+        <section class="crew-description">
+          <p class="category">COMMANDER</p>
+          <h1 class="crew-name">Douglas Hurley</h1>
+          <p class="crew-info baffle">
+            Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew
+            Dragon Demo-2.
+          </p>
+          <form action="/">
+            <input type="radio" name="crew-people" id="douglas" class="crew-names" checked />
+            <input type="radio" name="crew-people" id="mark" class="crew-names" />
+            <input type="radio" name="crew-people" id="victor" class="crew-names" />
+            <input type="radio" name="crew-people" id="anousheh" class="crew-names" />
+          </form>
+        </section>
+        <div class="crewImages"><img src="Images/crew-images/douglas.png" alt="crew-image" /></div>
+      </section>
+      <section class="technology03">
+        <form action="/">
+          <input type="radio" name="technologynumber" id="vehicle" class="technologyradio" checked />
+          <label for="vehicle">1</label>
+
+          <input type="radio" name="technologynumber" id="spaceport" class="technologyradio" />
+          <label for="spaceport">2</label>
+
+          <input type="radio" name="technologynumber" id="capsule" class="technologyradio" />
+          <label for="capsule">3</label>
+        </form>
+        <div class="technology-info">
+          <p class="terminology">THE TERMINOLOGY...</p>
+          <p class="name-technology">LAUNCH VEHICLE</p>
+          <p class="about-technology baffle">
+            A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X
+            carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
+          </p>
+        </div>
+        <div class="technologyImagechange"><img src="Images/technology-images/vehicle.png" alt="technologys" /></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

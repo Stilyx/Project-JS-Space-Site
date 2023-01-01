@@ -1,0 +1,751 @@
+@charset 'utf8';
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Body Configs */
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url(Images/home-images/space-home-background.jpg);
+  background-size: 100%, 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  font-family: 'Barlow Condensed', sans-serif;
+  transition: all 0.5s;
+}
+
+/* Header nav Configs */
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 96px;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+header img {
+  width: 46px;
+  height: 46px;
+  margin: 0 55px;
+}
+
+.bar {
+  position: absolute;
+  z-index: 2;
+  left: 140px;
+  width: 400px;
+  height: 3px;
+  border-bottom: 1px solid #ffff;
+  opacity: 0.25;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  height: 100%;
+  width: 62%;
+  max-width: 100%;
+  position: relative;
+}
+
+/* Menu Mobile Version */
+
+.menu {
+  display: none;
+}
+
+.hamburguer-bar {
+  display: none;
+  width: 28px;
+  height: 3px;
+  border-radius: 7px;
+  margin: 5px auto;
+  background-color: #d0d6f9;
+  transition: all 0.3 ease-in-out;
+}
+
+header input[type='radio'] {
+  display: none;
+}
+
+header input[type='radio'] + label:after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+header input[type='radio']:checked + label:after {
+  width: 100%;
+}
+header input[type='radio'] + label:active {
+  opacity: 0.25;
+}
+header form label {
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  margin-right: 50px;
+  height: 100%;
+  position: relative;
+  padding: 35px 0;
+}
+
+form label span {
+  margin-right: 11px;
+  font-weight: 700;
+}
+
+.section-description {
+  display: none;
+  color: white;
+  margin-bottom: 30px;
+  align-items: center;
+  margin-left: 166px;
+  gap: 20px;
+}
+
+.section-number {
+  font-size: 28px;
+  font-weight: 700;
+  opacity: 0.25;
+}
+
+.section-title {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 33.6px;
+  letter-spacing: 2px;
+}
+
+/* Section Home Nav */
+
+.home00 {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-around;
+  height: 60vh;
+}
+
+.space-description {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.title {
+  font-family: 'Bellefair', serif;
+  font-size: 150px;
+  color: white;
+  line-height: 171.9px;
+  font-weight: 400;
+}
+
+.space-paragraph {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 33.6px;
+  letter-spacing: 2px;
+  color: #d0d6f9;
+}
+
+.space-description-paragraph {
+  width: 100%;
+  height: 128px;
+  color: #d0d6f9;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.explore {
+  font-family: 'Bellefair', serif;
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  border: none;
+  color: #0b0d17;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.explore:hover {
+  box-shadow: 10px 10px 50px white, -10px -10px 50px white;
+}
+
+/* Section Destinatiom Nav */
+
+.destination01 {
+  display: none;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: flex-start;
+  gap: 100px;
+  width: 100%;
+  transition-delay: 3s;
+}
+
+.planet-image img {
+  margin-top: 10px;
+  width: 370px;
+  height: 370px;
+  min-width: 250px;
+  min-height: 250px;
+}
+
+.planets-description {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+}
+
+.planets-description input[type='radio'] {
+  display: none;
+}
+
+.planets-description input[type='radio'] + label:after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+.planets-description input[type='radio'] + label:active {
+  opacity: 0.25;
+}
+
+.planets-description input[type='radio']:checked + label:after {
+  width: 100%;
+}
+
+.planets-description form label {
+  font-family: 'Bellefair', serif;
+  align-items: flex-start;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #d0d6f9;
+  cursor: pointer;
+  margin-right: 20px;
+  position: relative;
+  padding: 10px;
+}
+.planets-description form {
+  margin-bottom: 30px;
+}
+
+.planet-name {
+  font-family: 'Bellefair', serif;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 144.6px;
+  color: white;
+}
+.planet-description {
+  color: #d0d6f9;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 25px;
+  width: 400px;
+  border-bottom: 1px solid #383b4b;
+  padding-bottom: 24px;
+  height: 120px;
+}
+
+.planet-nerd-description {
+  margin-top: 10px;
+  width: 400px;
+  display: flex;
+}
+
+.planet-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-title {
+  font-size: 14px;
+  line-height: 16.6px;
+  letter-spacing: 2px;
+  color: #d0d6f9;
+}
+
+.info-number {
+  font-family: 'Bellefair', serif;
+  font-size: 28px;
+  line-height: 32.09px;
+  color: white;
+}
+
+/* Section Crew People Nav */
+
+.crew02 {
+  display: none;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.crew02 img {
+  position: absolute;
+  height: 460px;
+  max-height: 600px;
+  max-width: 600px;
+  bottom: 0px;
+  right: 150px;
+}
+
+.crew-description {
+  width: 100%;
+  margin-left: 120px;
+  margin-top: 40px;
+}
+
+.category {
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+  font-size: 38px;
+  color: white;
+  opacity: 0.25;
+}
+
+.crew-name {
+  font-family: 'Bellefair', serif;
+  font-size: 56px;
+
+  width: 100%;
+  font-weight: 400;
+  line-height: 64.18px;
+  color: white;
+}
+
+.crew-info {
+  color: #d0d6f9;
+  font-size: 18px;
+  line-height: 32px;
+  width: 400px;
+  height: 100px;
+  margin-bottom: 100px;
+}
+
+.crew02 form {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.crew02 input[type='radio'] {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  opacity: 0.17;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.crew02 input[type='radio']:checked {
+  background: white;
+  opacity: 100%;
+  color: white;
+}
+
+/* Section Technologys Nav */
+
+.technology03 {
+  display: none;
+  align-items: center;
+  margin-top: 30px;
+  height: 200px;
+}
+
+.technology03 form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+  margin: 0px 80px 0px;
+}
+
+.technology03 input[type='radio'] {
+  display: none;
+}
+
+.technology03 form label {
+  cursor: pointer;
+  font-family: 'Bellafair', 'sans-serif';
+  font-weight: 400;
+  display: flex;
+  background-color: transparent;
+  border: 1px solid #ffffff38;
+  font-size: 32px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.technology03 input[type='radio']:checked + label {
+  background-color: white;
+  color: #0b0d17;
+}
+
+.technology-info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 500px;
+}
+
+.terminology {
+  color: #d0d6f9;
+  letter-spacing: 2px;
+  margin-bottom: 11px;
+}
+
+.name-technology {
+  font-size: 56px;
+  color: white;
+  font-family: 'Ballefair', 'sans-serif';
+  font-weight: 400;
+  line-height: 64.18px;
+}
+
+.about-technology {
+  font-size: 18px;
+  color: #d0d6f9;
+  width: 420px;
+  line-height: 32px;
+}
+
+.technology03 img {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  height: 400px;
+  width: 500px;
+}
+
+/* Tablet Querie Version */
+
+@media screen and (max-width: 1200px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .home00 {
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .bar {
+    display: none;
+  }
+
+  .home00 img {
+    width: 242px;
+    height: 242px;
+  }
+
+  .space-paragraph {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 150px;
+  }
+
+  .space-description {
+    font-size: 16px;
+    width: 440px;
+  }
+
+  .section-description {
+    display: none;
+    color: white;
+    margin-bottom: 30px;
+    align-items: center;
+    margin: 0 58px;
+    gap: 20px;
+  }
+
+  .section-number {
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0.25;
+  }
+
+  .section-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24.6px;
+    letter-spacing: 2px;
+  }
+
+  .destination01 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .destination01 img {
+    width: 300px;
+    height: 300px;
+  }
+  .planets-description {
+    align-items: center;
+    margin: 0;
+  }
+  .planet-name {
+    font-size: 80px;
+    line-height: 91px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .planet-description {
+    align-items: center;
+    width: 573px;
+    text-align: center;
+  }
+
+  .crew02 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .crew-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  .crew-info {
+    width: 458px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .crew02 img {
+    position: relative;
+    display: flex;
+    height: auto;
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    bottom: 0px;
+    right: 0;
+  }
+
+  .crew02 form {
+    margin-bottom: 40px;
+  }
+
+  .technology03 {
+    position: relative;
+    flex-direction: column-reverse;
+    height: auto;
+
+    margin: 0 auto 50px;
+    gap: 30px;
+  }
+
+  .technology03 form {
+    top: 390px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .technology-info {
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .about-technology {
+    width: 458px;
+    text-align: center;
+  }
+
+  .technology03 img {
+    top: 30px;
+    position: relative;
+    display: block;
+    object-fit: contain;
+    height: 310px;
+    margin-bottom: 150px;
+  }
+}
+
+/* Mobile Querie Version */
+
+@media screen and (max-width: 830px) {
+  .menu {
+    display: block;
+    cursor: pointer;
+    right: 30px;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .section-description {
+    display: none;
+  }
+
+  .hamburguer-bar {
+    display: block;
+    z-index: 10;
+    transition: 0.3s;
+  }
+  .menu.active .hamburguer-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu.active .hamburguer-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu.active .hamburguer-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  header {
+    height: 100%;
+    position: relative;
+  }
+
+  .nav-content.active {
+    right: 0px;
+  }
+  .nav-content {
+    display: flex;
+    right: -700px;
+    transition: 0.5s;
+    z-index: 3;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 0;
+    top: 0px;
+    bottom: 0px;
+    position: fixed;
+    height: auto;
+    width: 75%;
+  }
+  .nav-content label:active {
+    opacity: 0.25;
+  }
+  .nav-content form {
+    margin-top: 30px;
+  }
+
+  .nav-content label {
+    position: relative;
+    font-size: 38px;
+    top: 1px;
+    margin-left: 20px;
+    margin-right: 0px;
+    display: flex;
+    padding: 10px;
+  }
+
+  .space-description-paragraph {
+    text-align: center;
+  }
+
+  .planet-description {
+    width: 400px;
+  }
+  .section-description {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .planet-nerd-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .planet-info {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .crew02 {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .crew02 img {
+    height: 275px;
+  }
+  .crew-description {
+    width: 700px;
+
+    border-top: 1px solid #383b4b;
+    padding-top: 70px;
+    position: relative;
+  }
+  .crew02 form {
+    position: absolute;
+    top: 25px;
+  }
+  .category {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .crew-name {
+    font-size: 24px;
+  }
+  .crew-info {
+    font-size: 15px;
+    line-height: 25px;
+    width: 327px;
+  }
+}
