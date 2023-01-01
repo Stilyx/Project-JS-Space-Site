@@ -12,11 +12,12 @@
 /* Body Configs */
 
 body {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-image: url(images/home-images/space-home-background.jpg);
-  background-size: 100%, 100%;
-  object-fit: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Barlow Condensed', sans-serif;
   transition: all 0.5s;
@@ -459,13 +460,6 @@ form label span {
 /* Tablet Querie Version */
 
 @media screen and (max-width: 1200px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
   .home00 {
     flex-direction: column;
     height: 100%;
@@ -631,11 +625,6 @@ form label span {
     position: absolute;
     z-index: 10;
   }
-  body {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-  }
 
   .section-description {
     display: none;
@@ -700,7 +689,7 @@ form label span {
   }
 
   .planet-description {
-    width: 400px;
+    width: 100%;
   }
   .section-description {
     align-items: center;
@@ -731,7 +720,7 @@ form label span {
     height: 275px;
   }
   .crew-description {
-    width: 700px;
+    width: 100%;
 
     border-top: 1px solid #383b4b;
     padding-top: 70px;
