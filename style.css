@@ -13,7 +13,7 @@
 
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background-image: url(images/home-images/space-home-background.jpg);
@@ -460,6 +460,12 @@ form label span {
 /* Tablet Querie Version */
 
 @media screen and (max-width: 1200px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
+
   .home00 {
     flex-direction: column;
     height: 100%;
@@ -618,6 +624,11 @@ form label span {
 /* Mobile Querie Version */
 
 @media screen and (max-width: 830px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
   .menu {
     display: block;
     cursor: pointer;
