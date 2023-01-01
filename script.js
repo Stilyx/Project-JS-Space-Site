@@ -28,7 +28,7 @@ navCategory.forEach(nav => {
         destination.style.display = 'none';
         crew.style.display = 'none';
         technology.style.display = 'none';
-        document.body.style.backgroundImage = "url('Images/home-images/space-home-background.jpg')";
+        document.body.style.backgroundImage = "url('images/home-images/space-home-background.jpg')";
         break;
       case navArray[1]:
         sectionDescription.style.display = 'flex';
@@ -38,7 +38,7 @@ navCategory.forEach(nav => {
         destination.style.display = 'flex';
         crew.style.display = 'none';
         technology.style.display = 'none';
-        document.body.style.backgroundImage = "url('Images/destination-images/destination-background.png')";
+        document.body.style.backgroundImage = "url('images/destination-images/destination-background.png')";
         break;
       case navArray[2]:
         sectionDescription.style.display = 'flex';
@@ -48,7 +48,7 @@ navCategory.forEach(nav => {
         destination.style.display = 'none';
         crew.style.display = 'flex';
         technology.style.display = 'none';
-        document.body.style.backgroundImage = "url('Images/crew-images/crew-background.jpg')";
+        document.body.style.backgroundImage = "url('images/crew-images/crew-background.jpg')";
 
         break;
       case navArray[3]:
@@ -59,7 +59,7 @@ navCategory.forEach(nav => {
         destination.style.display = 'none';
         crew.style.display = 'none';
         technology.style.display = 'flex';
-        document.body.style.backgroundImage = "url('Images/technology-images/technology-background.jpg')";
+        document.body.style.backgroundImage = "url('images/technology-images/technology-background.jpg')";
         break;
       default:
         sectionDescription.style.display = 'none';
@@ -67,7 +67,7 @@ navCategory.forEach(nav => {
         destination.style.display = 'none';
         crew.style.display = 'none';
         technology.style.display = 'none';
-        document.body.style.backgroundImage = "url('Images/home-images/space-home-background.jpg')";
+        document.body.style.backgroundImage = "url('images/home-images/space-home-background.jpg')";
         break;
     }
   });
@@ -97,7 +97,7 @@ navplanets.forEach(nav => {
     const whoPlanet = e.target.id;
     switch (whoPlanet) {
       case planets[0]:
-        planetImage.childNodes[1].src = 'Images/destination-images/moon.png';
+        planetImage.childNodes[1].src = 'images/destination-images/moon.png';
         planetName.textContent = 'MOON';
         planetDescription.innerText = aboutPlanets[0];
         numbers.childNodes[1].childNodes[3].innerText = aboutKM[0];
@@ -152,26 +152,26 @@ crewNav.forEach(crew => {
         crewDescription.childNodes[1].textContent = crewCategory[0];
         crewDescription.childNodes[3].textContent = crewNames[0];
         crewDescription.childNodes[5].textContent = AboutCrew[0];
-        crewImages.childNodes[0].src = 'Images/crew-images/douglas.png';
+        crewImages.childNodes[0].src = 'images/crew-images/douglas.png';
 
         break;
       case crewIds[1]:
         crewDescription.childNodes[1].textContent = crewCategory[1];
         crewDescription.childNodes[3].textContent = crewNames[1];
         crewDescription.childNodes[5].textContent = AboutCrew[1];
-        crewImages.childNodes[0].src = 'Images/crew-images/mark.png';
+        crewImages.childNodes[0].src = 'images/crew-images/mark.png';
         break;
       case crewIds[2]:
         crewDescription.childNodes[1].textContent = crewCategory[2];
         crewDescription.childNodes[3].textContent = crewNames[2];
         crewDescription.childNodes[5].textContent = AboutCrew[2];
-        crewImages.childNodes[0].src = 'Images/crew-images/victor.png';
+        crewImages.childNodes[0].src = 'images/crew-images/victor.png';
         break;
       case crewIds[3]:
         crewDescription.childNodes[1].textContent = crewCategory[3];
         crewDescription.childNodes[3].textContent = crewNames[3];
         crewDescription.childNodes[5].textContent = AboutCrew[3];
-        crewImages.childNodes[0].src = 'Images/crew-images/anousheh.png';
+        crewImages.childNodes[0].src = 'images/crew-images/anousheh.png';
         break;
     }
   });
@@ -197,17 +197,17 @@ TechnologyNav.forEach(tech => {
       case technologyId[0]:
         technologyNameText.textContent = technologyName[0];
         techonologyText.textContent = aboutTechnology[0];
-        technologyImage.childNodes[0].src = 'Images/technology-images/vehicle.png';
+        technologyImage.childNodes[0].src = 'images/technology-images/vehicle.png';
         break;
       case technologyId[1]:
         technologyNameText.textContent = technologyName[1];
         techonologyText.textContent = aboutTechnology[1];
-        technologyImage.childNodes[0].src = 'Images/technology-images/spaceport.png';
+        technologyImage.childNodes[0].src = 'images/technology-images/spaceport.png';
         break;
       case technologyId[2]:
         technologyNameText.textContent = technologyName[2];
         techonologyText.textContent = aboutTechnology[2];
-        technologyImage.childNodes[0].src = 'Images/technology-images/capsule.png';
+        technologyImage.childNodes[0].src = 'images/technology-images/capsule.png';
         break;
     }
   });
