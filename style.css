@@ -306,7 +306,7 @@ form label span {
   position: relative;
   display: none;
   width: 70%;
-  height: 100%;
+
   justify-content: space-between;
   align-items: flex-end;
   margin: 0 auto;
@@ -325,24 +325,23 @@ form label span {
 .crew-name {
   font-family: 'ballefair', 'sans-serif';
   color: white;
-  line-height: 64px;
+  line-height: 50px;
   font-weight: 400;
   font-size: 46px;
   width: 100%;
-  margin-bottom: 27px;
+  margin-bottom: 20px;
 }
 
 .crew-info {
   font-size: 18px;
-  line-height: 32px;
+  line-height: 28px;
   color: #d0d6f9;
   width: 444px;
-  height: 128px;
-  margin-bottom: 30px;
+  height: 108px;
 }
 
 .crewImages img {
-  height: 410px;
+  height: 300px;
 }
 
 .crew02 form input {
@@ -354,7 +353,7 @@ form label span {
   height: 15px;
   border-radius: 50%;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .crew02 form input:hover {
@@ -367,8 +366,18 @@ form label span {
 }
 
 .crew02 form {
-  position: absolute;
-  bottom: -30px;
+  height: 50px;
+  position: relative;
+}
+
+.crew02 input[type='radio'] {
+  width: 20px;
+  height: 20px;
+}
+
+.left-side-crew {
+  display: flex;
+  flex-direction: column;
 }
 /* Technology Section Configuration */
 
@@ -800,7 +809,7 @@ form label span {
 
   .crew02 {
     flex-direction: column-reverse;
-    margin: 0 auto;
+
     align-items: center;
     justify-content: flex-end;
   }
@@ -840,6 +849,10 @@ form label span {
     font-size: 12px;
     line-height: 15px;
     margin-bottom: 10px;
+  }
+
+  .left-side-crew {
+    flex-direction: column-reverse;
   }
 
   .technology03 img {
