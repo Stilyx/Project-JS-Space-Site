@@ -14,6 +14,19 @@ menu.addEventListener('click', e => {
   navitem.classList.toggle('active');
 });
 
+button.addEventListener('click', e => {
+  navCategory[1].checked = true;
+
+  sectionDescription.style.display = 'flex';
+  sectionDescription.childNodes[1].textContent = '01';
+  sectionDescription.childNodes[3].textContent = 'PICK YOUR DESTINATION';
+  home.style.display = 'none';
+  destination.style.display = 'flex';
+  crew.style.display = 'none';
+  technology.style.display = 'none';
+  wallpaper.style.backgroundImage = "url('images/destination-images/destination-background.png')";
+});
+
 // Nav header
 const navArray = ['home', 'destination', 'crew', 'technology'];
 const navCategory = document.getElementsByName('nav-options');
