@@ -5,7 +5,7 @@ const crew = document.querySelector('.crew02');
 const technology = document.querySelector('.technology03');
 const sectionDescription = document.querySelector('.section-description');
 const button = document.querySelector('.explore');
-
+const wallpaper = document.querySelector('.imagebackground');
 // Mobile Menu
 
 const navitem = document.querySelector('.nav-content');
@@ -28,7 +28,7 @@ navCategory.forEach(nav => {
         destination.style.display = 'none';
         crew.style.display = 'none';
         technology.style.display = 'none';
-        document.body.style.backgroundImage = "url('images/home-images/space-home-background.jpg')";
+        wallpaper.style.backgroundImage = "url('images/home-images/space-home-background.jpg')";
         break;
       case navArray[1]:
         sectionDescription.style.display = 'flex';
@@ -38,7 +38,7 @@ navCategory.forEach(nav => {
         destination.style.display = 'flex';
         crew.style.display = 'none';
         technology.style.display = 'none';
-        document.body.style.backgroundImage = "url('images/destination-images/destination-background.png')";
+        wallpaper.style.backgroundImage = "url('images/destination-images/destination-background.png')";
         break;
       case navArray[2]:
         sectionDescription.style.display = 'flex';
@@ -48,7 +48,7 @@ navCategory.forEach(nav => {
         destination.style.display = 'none';
         crew.style.display = 'flex';
         technology.style.display = 'none';
-        document.body.style.backgroundImage = "url('images/crew-images/crew-background.jpg')";
+        wallpaper.style.backgroundImage = "url('images/crew-images/crew-background.jpg')";
 
         break;
       case navArray[3]:
@@ -59,7 +59,7 @@ navCategory.forEach(nav => {
         destination.style.display = 'none';
         crew.style.display = 'none';
         technology.style.display = 'flex';
-        document.body.style.backgroundImage = "url('images/technology-images/technology-background.jpg')";
+        wallpaper.style.backgroundImage = "url('images/technology-images/technology-background.jpg')";
         break;
       default:
         sectionDescription.style.display = 'none';
@@ -67,7 +67,7 @@ navCategory.forEach(nav => {
         destination.style.display = 'none';
         crew.style.display = 'none';
         technology.style.display = 'none';
-        document.body.style.backgroundImage = "url('images/home-images/space-home-background.jpg')";
+        wallpaper.style.backgroundImage = "url('images/home-images/space-home-background.jpg')";
         break;
     }
   });

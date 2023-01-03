@@ -17,10 +17,6 @@ body {
   font-family: 'Barlow Condensed', sans-serif;
   width: 100vw;
   height: 100vh;
-  background-image: url(images/home-images/space-home-background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all 0.5s;
 }
 
 /* Header nav Configs */
@@ -39,6 +35,19 @@ header img {
   width: 46px;
   height: 46px;
   margin: 0 55px;
+}
+
+.imagebackground {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url(images/home-images/space-home-background.jpg);
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+  background-size: cover;
 }
 
 .bar {
@@ -137,14 +146,6 @@ form label span {
   color: white;
 }
 
-/* .container {
-  display: flex;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-} */
-
 /* First Section Home Configuration */
 
 .home00 {
@@ -183,8 +184,8 @@ form label span {
 .explore {
   width: 274px;
   height: 274px;
-  min-width: 242px;
-  min-height: 242px;
+  min-width: 120px;
+  min-height: 120px;
   border-radius: 50%;
   border: none;
   align-self: flex-end;
@@ -200,8 +201,8 @@ form label span {
 .planet-image img {
   width: 350px;
   height: 350px;
-  min-width: 170px;
-  min-height: 170px;
+  min-width: 120px;
+  min-height: 120px;
 }
 
 .planets-description {
@@ -300,6 +301,7 @@ form label span {
 
 /* Crew Section Configuration */
 .crew02 {
+  position: relative;
   display: none;
   width: 70%;
   height: 100%;
@@ -362,14 +364,25 @@ form label span {
   opacity: 1;
 }
 
+.crew02 form {
+  position: absolute;
+  bottom: -30px;
+}
 /* Technology Section Configuration */
 
 .technology03 {
   display: none;
   width: 100%;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .technology03 form {
@@ -405,7 +418,7 @@ form label span {
 }
 
 .technology-info {
-  width: 100%;
+  width: 70%;
   height: 300px;
 }
 
@@ -431,28 +444,31 @@ form label span {
 }
 
 .technology03 img {
-  align-self: flex-end;
-  justify-content: flex-end;
-  width: 515px;
+  width: 500px;
   height: 400px;
-}
-.technologyImagechange {
-  align-self: flex-end;
 }
 
 /* Tablet Querie Version */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   body {
     width: 100%;
     height: 100vh;
   }
   header {
     margin-top: 0;
-    margin-bottom: 106px;
+    margin-bottom: 20px;
   }
   .bar {
     display: none;
+  }
+
+  .section-number {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
   }
 
   .home00 {
@@ -478,9 +494,12 @@ form label span {
   }
 
   .explore {
+    width: 200px;
+    height: 200px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px auto;
+    margin: 0 auto;
   }
 
   /* Destination Section Tablet */
@@ -492,14 +511,15 @@ form label span {
   }
 
   .destination01 img {
+    width: 250px;
+    height: 250px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
-  .planet-description form {
+  .planets-description form {
     align-items: center;
-
-    margin: 0 auto;
+    margin-bottom: 10px;
   }
 
   .planets-description form label {
@@ -511,11 +531,23 @@ form label span {
   }
 
   .planet-name {
-    font-size: 80px;
+    font-size: 50px;
   }
   .planet-description {
     width: 573px;
-    height: 84px;
+    height: 104px;
+    line-height: 30px;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .planet-nerd-description {
+    margin-bottom: 0;
+  }
+
+  .info-number {
+    font-size: 18px;
+    line-height: 15px;
   }
 
   .crew02 {
@@ -523,57 +555,97 @@ form label span {
     align-items: center;
     text-align: center;
     margin-top: 30px;
+    height: 100%;
+  }
+
+  .crew02 form {
+    position: relative;
+    margin: 0;
+  }
+
+  .crew-name {
+    line-height: 15px;
+    font-weight: 400;
+    font-size: 37px;
   }
 
   .crew-info {
-    margin: 30px auto;
+    margin: 0 auto;
+    height: 70px;
+    line-height: 20px;
   }
 
-  .crewImages img {
-    height: 350px;
+  .crew02 img {
+    height: 250px;
+    align-self: flex-end;
   }
 
   .technology03 {
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
     margin: 0 auto;
   }
 
+  .left-side {
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .terminology {
+    margin-top: 10px;
+  }
+
   .technology03 img {
-    z-index: 10;
-    position: absolute;
+    margin-top: 10px;
     width: 100%;
     height: 310px;
-    left: 0;
-    top: 300px;
     object-fit: fill;
+    align-self: center;
+    justify-content: center;
   }
 
   .technology03 form {
     flex-direction: row;
+  }
 
-    position: relative;
-    top: 400px;
+  .name-technology {
+    font-size: 28px;
+    line-height: 20px;
   }
 
   .technology-info {
-    position: absolute;
-    top: 750px;
+    line-height: 20px;
+    height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
   }
 
   .about-technology {
     width: 458px;
-    height: 140px;
+    height: 80px;
     text-align: center;
-    margin: 0 auto;
+    margin: 10px auto;
+    line-height: 20px;
   }
 }
 
 /* Mobile Querie Version */
 
 @media screen and (max-width: 830px) {
+  header {
+    margin-bottom: 25px;
+  }
+  .container {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
   .menu {
     display: block;
     cursor: pointer;
@@ -587,6 +659,14 @@ form label span {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+  }
+
+  .section-number {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 16px;
   }
 
   .hamburguer-bar {
@@ -639,51 +719,216 @@ form label span {
     padding: 10px;
   }
 
+  .home00 {
+    height: auto;
+  }
+  .space-paragraph {
+    font-size: 25px;
+  }
+
   .planet-name {
     font-size: 56px;
   }
 
+  .title {
+    font-size: 80px;
+  }
+
+  .space-description-paragraph {
+    font-size: 15px;
+    line-height: 20px;
+    width: 250px;
+  }
+
+  .explore {
+    width: 200px;
+    height: 200px;
+
+    font-size: 15px;
+    margin: 10px auto;
+  }
+  .destination01 {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
   .destination01 img {
-    width: 40px;
-    height: 40px;
+    width: 200px;
+    height: 200px;
   }
 
   .planet-description {
-    width: 327px;
-    height: 125px;
-    margin-bottom: 40px;
+    height: 105px;
+    line-height: 20px;
+    width: 370px;
+    margin: 0;
+  }
+
+  .planet-info {
+    gap: 0;
+    justify-content: unset;
+    line-height: 15px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .info-title {
+    font-size: 14px;
+    line-height: 15px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .info-number {
+    font-size: 15px;
+    line-height: 15px;
+    padding: 0;
+    margin: 0;
   }
 
   .planet-nerd-description {
     flex-direction: column;
+    line-height: 20px;
     margin-bottom: 10px;
-    gap: 40px;
   }
 
   .crew02 {
     flex-direction: column-reverse;
-
     margin: 0 auto;
-  }
-
-  .crew02 form {
-    left: 0;
-    right: 0;
-    position: absolute;
-    top: 650px;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .crew02 img {
     margin-top: 30px;
+    margin-bottom: 30px;
+    height: 300px;
+    border-bottom: 1px solid white;
   }
 
   .category {
-    border-top: 1px solid white;
-    padding-top: 80px;
     font-size: 16px;
   }
 
   .crew-name {
     font-size: 24px;
+    line-height: 25px;
+    margin: 10px 0;
+  }
+  .crew02 form {
+    align-items: center;
+    justify-content: center;
+    top: 0;
+  }
+
+  .crew02 form input {
+    margin: 0 10px 0 0;
+  }
+
+  .crew02 form input:nth-child(4) {
+    margin: 0;
+  }
+  .crew-info {
+    width: 250px;
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+
+  .technology03 img {
+    margin-top: 10px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .technology03 form {
+    margin: 10px 0 0 0;
+  }
+  .about-technology {
+    width: 220px;
+    height: 150px;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px auto;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .destination01 img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav-content label {
+    font-size: 18px;
+  }
+
+  .container {
+    align-items: flex-start;
+  }
+  .explore {
+    width: 100px;
+    height: 100px;
+  }
+
+  .destination01 form {
+    margin-bottom: 20px;
+  }
+
+  .destination01 form label {
+    font-size: 10px;
+  }
+
+  .planet-name {
+    font-size: 30px;
+  }
+
+  .destination01 img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .planet-description {
+    font-size: 10px;
+    width: 100%;
+    height: 100px;
+    padding-bottom: 2px;
+  }
+
+  .planet-nerd-description {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .info-number {
+    margin-top: 10px;
+  }
+
+  .crew02 img {
+    height: 200px;
+  }
+
+  .technology03 img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .technology03 form label {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .name-technology {
+    font-size: 20px;
+  }
+
+  .about-technology {
+    font-size: 12px;
+    margin: 10px 0 0 0;
+    width: 100%;
   }
 }
