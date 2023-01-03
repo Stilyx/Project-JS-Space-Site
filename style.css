@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   font-family: 'Barlow Condensed', sans-serif;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 /* Header nav Configs */
