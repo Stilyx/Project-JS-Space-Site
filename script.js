@@ -6,15 +6,14 @@ const technology = document.querySelector('.technology03');
 const sectionDescription = document.querySelector('.section-description');
 const button = document.querySelector('.explore');
 const wallpaper = document.querySelector('.imagebackground');
-// Mobile Menu
-
 const navitem = document.querySelector('.nav-content');
-menu.addEventListener('click', e => {
+
+const activeMenuHamburguer = e => {
   menu.classList.toggle('active');
   navitem.classList.toggle('active');
-});
+};
 
-button.addEventListener('click', e => {
+const exploreButton = e => {
   navCategory[1].checked = true;
 
   sectionDescription.style.display = 'flex';
@@ -25,66 +24,64 @@ button.addEventListener('click', e => {
   crew.style.display = 'none';
   technology.style.display = 'none';
   wallpaper.style.backgroundImage = "url('images/destination-images/destination-background.png')";
-});
+};
 
 // Nav header
 const navArray = ['home', 'destination', 'crew', 'technology'];
 const navCategory = document.getElementsByName('nav-options');
 
-navCategory.forEach(nav => {
-  nav.addEventListener('click', e => {
-    const whoSection = e.target.id;
-    switch (whoSection) {
-      case navArray[0]:
-        sectionDescription.style.display = 'none';
-        home.style.display = 'flex';
-        destination.style.display = 'none';
-        crew.style.display = 'none';
-        technology.style.display = 'none';
-        wallpaper.style.backgroundImage = "url('images/home-images/space-home-background.jpg')";
-        break;
-      case navArray[1]:
-        sectionDescription.style.display = 'flex';
-        sectionDescription.childNodes[1].textContent = '01';
-        sectionDescription.childNodes[3].textContent = 'PICK YOUR DESTINATION';
-        home.style.display = 'none';
-        destination.style.display = 'flex';
-        crew.style.display = 'none';
-        technology.style.display = 'none';
-        wallpaper.style.backgroundImage = "url('images/destination-images/destination-background.png')";
-        break;
-      case navArray[2]:
-        sectionDescription.style.display = 'flex';
-        sectionDescription.childNodes[1].textContent = '02';
-        sectionDescription.childNodes[3].textContent = 'MEET YOUR CREW';
-        home.style.display = 'none';
-        destination.style.display = 'none';
-        crew.style.display = 'flex';
-        technology.style.display = 'none';
-        wallpaper.style.backgroundImage = "url('images/crew-images/crew-background.jpg')";
+const headerNavChange = e => {
+  const whoSection = e.target.id;
+  switch (whoSection) {
+    case navArray[0]:
+      sectionDescription.style.display = 'none';
+      home.style.display = 'flex';
+      destination.style.display = 'none';
+      crew.style.display = 'none';
+      technology.style.display = 'none';
+      wallpaper.style.backgroundImage = '';
+      break;
+    case navArray[1]:
+      sectionDescription.style.display = 'flex';
+      sectionDescription.childNodes[1].textContent = '01';
+      sectionDescription.childNodes[3].textContent = 'PICK YOUR DESTINATION';
+      home.style.display = 'none';
+      destination.style.display = 'flex';
+      crew.style.display = 'none';
+      technology.style.display = 'none';
+      wallpaper.style.backgroundImage = "url('images/destination-images/destination-background.png')";
+      break;
+    case navArray[2]:
+      sectionDescription.style.display = 'flex';
+      sectionDescription.childNodes[1].textContent = '02';
+      sectionDescription.childNodes[3].textContent = 'MEET YOUR CREW';
+      home.style.display = 'none';
+      destination.style.display = 'none';
+      crew.style.display = 'flex';
+      technology.style.display = 'none';
+      wallpaper.style.backgroundImage = "url('images/crew-images/crew-background.jpg')";
 
-        break;
-      case navArray[3]:
-        sectionDescription.style.display = 'flex';
-        sectionDescription.childNodes[1].textContent = '03';
-        sectionDescription.childNodes[3].textContent = 'SPACE LAUNCH 101';
-        home.style.display = 'none';
-        destination.style.display = 'none';
-        crew.style.display = 'none';
-        technology.style.display = 'flex';
-        wallpaper.style.backgroundImage = "url('images/technology-images/technology-background.jpg')";
-        break;
-      default:
-        sectionDescription.style.display = 'none';
-        home.style.display = 'flex';
-        destination.style.display = 'none';
-        crew.style.display = 'none';
-        technology.style.display = 'none';
-        wallpaper.style.backgroundImage = "url('images/home-images/space-home-background.jpg')";
-        break;
-    }
-  });
-});
+      break;
+    case navArray[3]:
+      sectionDescription.style.display = 'flex';
+      sectionDescription.childNodes[1].textContent = '03';
+      sectionDescription.childNodes[3].textContent = 'SPACE LAUNCH 101';
+      home.style.display = 'none';
+      destination.style.display = 'none';
+      crew.style.display = 'none';
+      technology.style.display = 'flex';
+      wallpaper.style.backgroundImage = "url('images/technology-images/technology-background.jpg')";
+      break;
+    default:
+      sectionDescription.style.display = 'none';
+      home.style.display = 'flex';
+      destination.style.display = 'none';
+      crew.style.display = 'none';
+      technology.style.display = 'none';
+      wallpaper.style.backgroundImage = "url('images/home-images/space-home-background.jpg')";
+      break;
+  }
+};
 
 // Planets Nav Bar
 
@@ -105,41 +102,39 @@ const aboutPlanets = [
 const aboutKM = ['384,400 KM', '225 MIL. KM', '628 MIL. KM', '1.6 BIL. KM'];
 const aboutDays = ['3 DAYS', '9 MONTHS', '3 YEARS', '7 YEARS'];
 
-navplanets.forEach(nav => {
-  nav.addEventListener('click', e => {
-    const whoPlanet = e.target.id;
-    switch (whoPlanet) {
-      case planets[0]:
-        planetImage.childNodes[1].src = 'images/destination-images/moon.png';
-        planetName.textContent = 'MOON';
-        planetDescription.innerText = aboutPlanets[0];
-        numbers.childNodes[1].childNodes[3].innerText = aboutKM[0];
-        numbers.childNodes[3].childNodes[3].innerText = aboutDays[0];
-        break;
-      case planets[1]:
-        planetImage.childNodes[1].src = 'images/destination-images/mars.png';
-        planetName.innerText = 'MARS';
-        planetDescription.innerText = aboutPlanets[1];
-        numbers.childNodes[1].childNodes[3].innerText = aboutKM[1];
-        numbers.childNodes[3].childNodes[3].innerText = aboutDays[1];
-        break;
-      case planets[2]:
-        planetImage.childNodes[1].src = 'images/destination-images/europa.png';
-        planetName.innerText = 'EUROPA';
-        planetDescription.innerText = aboutPlanets[2];
-        numbers.childNodes[1].childNodes[3].innerText = aboutKM[2];
-        numbers.childNodes[3].childNodes[3].innerText = aboutDays[2];
-        break;
-      case planets[3]:
-        planetImage.childNodes[1].src = 'images/destination-images/titan.png';
-        planetName.innerText = 'TITAN';
-        planetDescription.innerText = aboutPlanets[3];
-        numbers.childNodes[1].childNodes[3].innerText = aboutKM[3];
-        numbers.childNodes[3].childNodes[3].innerText = aboutDays[3];
-        break;
-    }
-  });
-});
+const planetsNavChange = e => {
+  const whoPlanet = e.target.id;
+  switch (whoPlanet) {
+    case planets[0]:
+      planetImage.childNodes[1].src = 'images/destination-images/moon.png';
+      planetName.textContent = 'MOON';
+      planetDescription.innerText = aboutPlanets[0];
+      numbers.childNodes[1].childNodes[3].innerText = aboutKM[0];
+      numbers.childNodes[3].childNodes[3].innerText = aboutDays[0];
+      break;
+    case planets[1]:
+      planetImage.childNodes[1].src = 'images/destination-images/mars.png';
+      planetName.innerText = 'MARS';
+      planetDescription.innerText = aboutPlanets[1];
+      numbers.childNodes[1].childNodes[3].innerText = aboutKM[1];
+      numbers.childNodes[3].childNodes[3].innerText = aboutDays[1];
+      break;
+    case planets[2]:
+      planetImage.childNodes[1].src = 'images/destination-images/europa.png';
+      planetName.innerText = 'EUROPA';
+      planetDescription.innerText = aboutPlanets[2];
+      numbers.childNodes[1].childNodes[3].innerText = aboutKM[2];
+      numbers.childNodes[3].childNodes[3].innerText = aboutDays[2];
+      break;
+    case planets[3]:
+      planetImage.childNodes[1].src = 'images/destination-images/titan.png';
+      planetName.innerText = 'TITAN';
+      planetDescription.innerText = aboutPlanets[3];
+      numbers.childNodes[1].childNodes[3].innerText = aboutKM[3];
+      numbers.childNodes[3].childNodes[3].innerText = aboutDays[3];
+      break;
+  }
+};
 
 //  Crew Nav Bar
 
@@ -156,41 +151,40 @@ const AboutCrew = [
   'Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.'
 ];
 
-crewNav.forEach(crew => {
-  crew.addEventListener('click', e => {
-    const whocrew = e.target.id;
+const crewNavItemsChange = e => {
+  const whocrew = e.target.id;
 
-    switch (whocrew) {
-      case crewIds[0]:
-        crewDescription.childNodes[1].textContent = crewCategory[0];
-        crewDescription.childNodes[3].textContent = crewNames[0];
-        crewDescription.childNodes[5].textContent = AboutCrew[0];
-        crewImages.childNodes[0].src = 'images/crew-images/douglas.png';
+  switch (whocrew) {
+    case crewIds[0]:
+      crewDescription.childNodes[1].textContent = crewCategory[0];
+      crewDescription.childNodes[3].textContent = crewNames[0];
+      crewDescription.childNodes[5].textContent = AboutCrew[0];
+      crewImages.childNodes[0].src = 'images/crew-images/douglas.png';
 
-        break;
-      case crewIds[1]:
-        crewDescription.childNodes[1].textContent = crewCategory[1];
-        crewDescription.childNodes[3].textContent = crewNames[1];
-        crewDescription.childNodes[5].textContent = AboutCrew[1];
-        crewImages.childNodes[0].src = 'images/crew-images/mark.png';
-        break;
-      case crewIds[2]:
-        crewDescription.childNodes[1].textContent = crewCategory[2];
-        crewDescription.childNodes[3].textContent = crewNames[2];
-        crewDescription.childNodes[5].textContent = AboutCrew[2];
-        crewImages.childNodes[0].src = 'images/crew-images/victor.png';
-        break;
-      case crewIds[3]:
-        crewDescription.childNodes[1].textContent = crewCategory[3];
-        crewDescription.childNodes[3].textContent = crewNames[3];
-        crewDescription.childNodes[5].textContent = AboutCrew[3];
-        crewImages.childNodes[0].src = 'images/crew-images/anousheh.png';
-        break;
-    }
-  });
-});
+      break;
+    case crewIds[1]:
+      crewDescription.childNodes[1].textContent = crewCategory[1];
+      crewDescription.childNodes[3].textContent = crewNames[1];
+      crewDescription.childNodes[5].textContent = AboutCrew[1];
+      crewImages.childNodes[0].src = 'images/crew-images/mark.png';
+      break;
+    case crewIds[2]:
+      crewDescription.childNodes[1].textContent = crewCategory[2];
+      crewDescription.childNodes[3].textContent = crewNames[2];
+      crewDescription.childNodes[5].textContent = AboutCrew[2];
+      crewImages.childNodes[0].src = 'images/crew-images/victor.png';
+      break;
+    case crewIds[3]:
+      crewDescription.childNodes[1].textContent = crewCategory[3];
+      crewDescription.childNodes[3].textContent = crewNames[3];
+      crewDescription.childNodes[5].textContent = AboutCrew[3];
+      crewImages.childNodes[0].src = 'images/crew-images/anousheh.png';
+      break;
+  }
+};
 
 // Technology Nav
+
 const TechnologyNav = document.getElementsByName('technologynumber');
 const technologyNameText = document.querySelector('.name-technology');
 const technologyImage = document.querySelector('.technologyImagechange');
@@ -203,25 +197,30 @@ const aboutTechnology = [
 ];
 const technologyId = ['vehicle', 'spaceport', 'capsule'];
 
-TechnologyNav.forEach(tech => {
-  tech.addEventListener('click', e => {
-    const whotechnology = e.target.id;
-    switch (whotechnology) {
-      case technologyId[0]:
-        technologyNameText.textContent = technologyName[0];
-        techonologyText.textContent = aboutTechnology[0];
-        technologyImage.childNodes[0].src = 'images/technology-images/vehicle.png';
-        break;
-      case technologyId[1]:
-        technologyNameText.textContent = technologyName[1];
-        techonologyText.textContent = aboutTechnology[1];
-        technologyImage.childNodes[0].src = 'images/technology-images/spaceport.png';
-        break;
-      case technologyId[2]:
-        technologyNameText.textContent = technologyName[2];
-        techonologyText.textContent = aboutTechnology[2];
-        technologyImage.childNodes[0].src = 'images/technology-images/capsule.png';
-        break;
-    }
-  });
-});
+const technologyNavItemsChange = e => {
+  const whotechnology = e.target.id;
+  switch (whotechnology) {
+    case technologyId[0]:
+      technologyNameText.textContent = technologyName[0];
+      techonologyText.textContent = aboutTechnology[0];
+      technologyImage.childNodes[0].src = 'images/technology-images/vehicle.png';
+      break;
+    case technologyId[1]:
+      technologyNameText.textContent = technologyName[1];
+      techonologyText.textContent = aboutTechnology[1];
+      technologyImage.childNodes[0].src = 'images/technology-images/spaceport.png';
+      break;
+    case technologyId[2]:
+      technologyNameText.textContent = technologyName[2];
+      techonologyText.textContent = aboutTechnology[2];
+      technologyImage.childNodes[0].src = 'images/technology-images/capsule.png';
+      break;
+  }
+};
+
+button.addEventListener('click', exploreButton);
+navCategory.forEach(nav => nav.addEventListener('click', headerNavChange));
+navplanets.forEach(nav => nav.addEventListener('click', planetsNavChange));
+crewNav.forEach(crew => crew.addEventListener('click', crewNavItemsChange));
+TechnologyNav.forEach(tech => tech.addEventListener('click', technologyNavItemsChange));
+menu.addEventListener('click', activeMenuHamburguer);
