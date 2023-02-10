@@ -49,7 +49,8 @@ const headerNavChange = e => {
       destination.style.display = 'flex';
       crew.style.display = 'none';
       technology.style.display = 'none';
-      wallpaper.style.backgroundImage = "url('images/destination-images/destination-background.png')";
+      wallpaper.style.backgroundImage =
+        "url('images/destination-images/destination-background.png')";
       break;
     case navArray[2]:
       sectionDescription.style.display = 'flex';
@@ -159,26 +160,26 @@ const crewNavItemsChange = e => {
       crewDescription.childNodes[1].textContent = crewCategory[0];
       crewDescription.childNodes[3].textContent = crewNames[0];
       crewDescription.childNodes[5].textContent = AboutCrew[0];
-      crewImages.childNodes[0].src = 'images/crew-images/douglas.png';
+      crewImages.childNodes[1].src = 'images/crew-images/douglas.png';
 
       break;
     case crewIds[1]:
       crewDescription.childNodes[1].textContent = crewCategory[1];
       crewDescription.childNodes[3].textContent = crewNames[1];
       crewDescription.childNodes[5].textContent = AboutCrew[1];
-      crewImages.childNodes[0].src = 'images/crew-images/mark.png';
+      crewImages.childNodes[1].src = 'images/crew-images/mark.png';
       break;
     case crewIds[2]:
       crewDescription.childNodes[1].textContent = crewCategory[2];
       crewDescription.childNodes[3].textContent = crewNames[2];
       crewDescription.childNodes[5].textContent = AboutCrew[2];
-      crewImages.childNodes[0].src = 'images/crew-images/victor.png';
+      crewImages.childNodes[1].src = 'images/crew-images/victor.png';
       break;
     case crewIds[3]:
       crewDescription.childNodes[1].textContent = crewCategory[3];
       crewDescription.childNodes[3].textContent = crewNames[3];
       crewDescription.childNodes[5].textContent = AboutCrew[3];
-      crewImages.childNodes[0].src = 'images/crew-images/anousheh.png';
+      crewImages.childNodes[1].src = 'images/crew-images/anousheh.png';
       break;
   }
 };
@@ -203,17 +204,17 @@ const technologyNavItemsChange = e => {
     case technologyId[0]:
       technologyNameText.textContent = technologyName[0];
       techonologyText.textContent = aboutTechnology[0];
-      technologyImage.childNodes[0].src = 'images/technology-images/vehicle.png';
+      technologyImage.childNodes[1].src = 'images/technology-images/vehicle.png';
       break;
     case technologyId[1]:
       technologyNameText.textContent = technologyName[1];
       techonologyText.textContent = aboutTechnology[1];
-      technologyImage.childNodes[0].src = 'images/technology-images/spaceport.png';
+      technologyImage.childNodes[1].src = 'images/technology-images/spaceport.png';
       break;
     case technologyId[2]:
       technologyNameText.textContent = technologyName[2];
       techonologyText.textContent = aboutTechnology[2];
-      technologyImage.childNodes[0].src = 'images/technology-images/capsule.png';
+      technologyImage.childNodes[1].src = 'images/technology-images/capsule.png';
       break;
   }
 };
